@@ -17,7 +17,7 @@ export default function ContactForm(){
         console.log("Message: ", message);
 
         const res = await fetch("api/contact",{
-            methid: "POST",
+            method: "POST",
             headers: {
                 "Content-type": "application/json"
             },
@@ -81,6 +81,10 @@ export default function ContactForm(){
                 Send
             </button>
         </form>
+
+        <div className="bg-slate-100 flex flex-col">
+            <div className="text-red-600 px-5 py-2">Error Message</div>
+        </div>
         </>
 
     );
